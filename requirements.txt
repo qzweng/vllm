@@ -1,15 +1,18 @@
+ray==2.9.1
+torch==2.0.1
+transformers==4.38.2  # Required for StarCoder2 & Llava.
+triton==2.0.0
+xformers==0.0.22  # the latest version, since 0.0.22.post7 requires torch>=2.1.0
+#
 ninja  # For faster builds.
 psutil
-ray >= 2.9
 sentencepiece  # Required for LLaMA tokenizer.
 numpy
-torch == 2.1.2
-transformers >= 4.38.0  # Required for Gemma.
-xformers == 0.0.23.post1  # Required for CUDA 12.1.
 fastapi
 uvicorn[standard]
-pydantic >= 2.0  # Required for OpenAI server.
 aioprometheus[starlette]
-pynvml == 11.5.0
-triton >= 2.1.0
-cupy-cuda12x == 12.1.0  # Required for CUDA graphs. CUDA 11.8 users should install cupy-cuda11x instead.
+pydantic>=2.0  # Required for OpenAI server.
+prometheus_client>=0.18.0
+pynvml==11.5.0
+outlines
+cupy-cuda11x
